@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Single continuous 2.5px teal stroke: handset silhouette whose cord
+       curves into an ECG pulse line (one sharp QRS spike). -->
+  <path
+    d="M12 34
+       C10 24 20 14 32 14
+       C44 14 54 24 52 34
+       C51 38 46 38 45 34
+       C44 28 38 23 32 23
+       C26 23 20 28 19 34
+       C18 38 13 38 12 34
+       C11 42 14 50 22 53
+       C27 54.6 32 55 38 55
+       L41 58 L44 42 L47 59 L50 55 L60 55"
+    stroke="#14B8A6"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
