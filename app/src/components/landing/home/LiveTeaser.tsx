@@ -9,7 +9,7 @@ import { TranscriptBubble } from "@/components/shared/TranscriptBubble";
 import { RedFlagChip } from "@/components/shared/RedFlagChip";
 import { ExtractionField } from "@/components/shared/ExtractionField";
 import { teaserScript } from "@/lib/simulation";
-import { cn } from "@/lib/utils";
+import { assetUrl, cn } from "@/lib/utils";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -131,7 +131,7 @@ export function LiveTeaser() {
         <div className="teaser-console w-full max-w-[520px] rounded-2xl border border-ink-700 bg-ink-900/90 p-5 opacity-0 shadow-dark-card backdrop-blur lg:justify-self-end">
           {/* patient header */}
           <div className="flex items-center gap-3">
-            <img src="/avatar-margaret.png" alt="Margaret Ellis" className="h-11 w-11 rounded-full object-cover ring-1 ring-ink-700" />
+            <img src={assetUrl("/avatar-margaret.png")} alt="Margaret Ellis" className="h-11 w-11 rounded-full object-cover ring-1 ring-ink-700" />
             <div>
               <div className="text-sm font-semibold text-ink-100">Margaret Ellis · 72</div>
               <div className="font-mono text-[11px] text-ink-400">day 3 post-op · 72h check-in</div>

@@ -1,7 +1,7 @@
 import { Fragment, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { assetUrl, cn } from "@/lib/utils";
 import { careTeam, patientById } from "@/data/seed";
 import type { Escalation } from "@/data/seed";
 import { PriorityTag } from "@/components/shared/PriorityTag";
@@ -28,7 +28,7 @@ function outcomeBadge(outcome: string) {
 
 function resolvedByAvatar(name: string) {
   const member = careTeam.find((m) => m.name === name);
-  return member?.avatar ?? "/avatar-nurse-ruiz.png";
+  return member?.avatar ?? assetUrl("/avatar-nurse-ruiz.png");
 }
 
 /**

@@ -1,3 +1,4 @@
+import { assetUrl } from "@/lib/utils";
 import { useEffect, useRef } from "react";
 import { PhoneMissed, Thermometer, Pill, SquareActivity } from "lucide-react";
 import gsap from "gsap";
@@ -64,7 +65,7 @@ export function ProblemSection() {
     <section ref={rootRef} id="problem" className="relative overflow-hidden bg-ink-950">
       {/* background: ward-light.jpg at 12% opacity */}
       <div className="problem-bg pointer-events-none absolute inset-0 will-change-transform">
-        <img src="/ward-light.jpg" alt="" aria-hidden className="h-full w-full object-cover opacity-[0.12]" />
+        <img src={assetUrl("/ward-light.jpg")} alt="" aria-hidden className="h-full w-full object-cover opacity-[0.12]" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink-950 via-ink-950/70 to-ink-950" />
       </div>
 
@@ -112,7 +113,7 @@ export function ProblemSection() {
             <div className="beat beat-1 absolute inset-0 flex items-center justify-center md:opacity-100">
               <div className="w-80 rounded-2xl border border-ink-700 bg-ink-800/90 p-5 shadow-dark-card backdrop-blur">
                 <div className="flex items-center gap-3">
-                  <img src="/avatar-margaret.png" alt="Margaret Ellis" className="h-12 w-12 rounded-full object-cover ring-1 ring-ink-700" />
+                  <img src={assetUrl("/avatar-margaret.png")} alt="Margaret Ellis" className="h-12 w-12 rounded-full object-cover ring-1 ring-ink-700" />
                   <div>
                     <div className="text-sm font-semibold text-ink-100">Margaret Ellis · 72</div>
                     <div className="font-mono text-[11px] text-ink-400">L hip replacement · day 0</div>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { Github } from "lucide-react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { assetUrl, cn } from "@/lib/utils";
 
 const LINKS = [
   { label: "Problem", href: "#problem" },
@@ -51,7 +51,7 @@ export function LandingNavbar() {
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6">
         {/* brand */}
         <Link to="/" className="flex items-center gap-2.5">
-          <img src="/logo.svg" alt="PDC logo" className="h-7 w-7" />
+          <img src={assetUrl("/logo.svg")} alt="PDC logo" className="h-7 w-7" />
           <span className="text-[15px] font-semibold text-ink-100">Post-Discharge Check</span>
           <span className="rounded border border-ink-700 bg-ink-800 px-1.5 py-0.5 font-mono text-[10px] font-bold tracking-widest text-teal-400">
             PDC

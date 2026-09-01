@@ -1,3 +1,4 @@
+import { assetUrl } from "@/lib/utils";
 import { Link } from "react-router";
 
 /**
@@ -10,7 +11,7 @@ export function LandingFooter() {
         {/* brand */}
         <div>
           <div className="flex items-center gap-2.5">
-            <img src="/logo.svg" alt="PDC logo" className="h-7 w-7" />
+            <img src={assetUrl("/logo.svg")} alt="PDC logo" className="h-7 w-7" />
             <span className="text-[15px] font-semibold text-ink-100">Post-Discharge Check</span>
           </div>
           <p className="mt-4 max-w-xs text-[13px] leading-relaxed text-ink-400">

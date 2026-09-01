@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router";
 import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "sonner";
 import { ShieldCheck } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { assetUrl, cn } from "@/lib/utils";
 import { careTeam, escalations as seedEscalations } from "@/data/seed";
 import type { Escalation } from "@/data/seed";
 import { EmptyState } from "@/components/shared/EmptyState";
@@ -49,7 +49,7 @@ export default function Escalations() {
     "ESC-1042": [
       {
         author: "Nurse O'Brien",
-        avatar: "/avatar-nurse-obrien.png",
+        avatar: assetUrl("/avatar-nurse-obrien.png"),
         ts: "09:26",
         text: "Saw the page — I can cover the callback if you're tied up on 3W.",
       },

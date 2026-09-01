@@ -1,3 +1,4 @@
+import { assetUrl } from "@/lib/utils";
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 import { Play } from "lucide-react";
@@ -66,7 +67,7 @@ function MiniConsole() {
     <div ref={ref} className="mini-console w-[380px] rounded-2xl border border-ink-700 bg-ink-800/60 p-4 shadow-teal-glow backdrop-blur-xl will-change-transform">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <img src="/avatar-margaret.png" alt="Margaret Ellis" className="h-8 w-8 rounded-full object-cover ring-1 ring-ink-700" />
+          <img src={assetUrl("/avatar-margaret.png")} alt="Margaret Ellis" className="h-8 w-8 rounded-full object-cover ring-1 ring-ink-700" />
           <div>
             <div className="text-[13px] font-semibold text-ink-100">Margaret Ellis · 72</div>
             <div className="font-mono text-[10px] text-ink-400">72h check-in · Ortho</div>
@@ -169,7 +170,7 @@ export function HeroSection() {
     <section ref={rootRef} className="relative flex min-h-[100dvh] items-center overflow-hidden bg-ink-950" style={{ minHeight: "max(100dvh, 720px)" }}>
       {/* poster fallback (always painted beneath the 3D scene; sole bg on mobile) */}
       <img
-        src="/hero-poster.png"
+        src={assetUrl("/hero-poster.png")}
         alt=""
         aria-hidden
         className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-70"

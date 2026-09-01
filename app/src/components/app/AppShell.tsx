@@ -14,7 +14,7 @@ import {
   Users,
   Zap,
 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { assetUrl, cn } from "@/lib/utils";
 import { careTeam, openEscalationCount } from "@/data/seed";
 import { useCallEMode } from "@/lib/calle";
 import { CommandPalette } from "@/components/app/CommandPalette";
@@ -100,7 +100,7 @@ export function AppShell() {
       >
         {/* logo */}
         <div className={cn("flex h-16 items-center gap-2.5 border-b border-line px-4", collapsed && "justify-center px-0")}>
-          <img src="/logo.svg" alt="PDC" className="h-7 w-7 shrink-0" />
+          <img src={assetUrl("/logo.svg")} alt="PDC" className="h-7 w-7 shrink-0" />
           {!collapsed && (
             <span className="truncate text-[15px] font-semibold text-slate-900">
               Post-Discharge Check

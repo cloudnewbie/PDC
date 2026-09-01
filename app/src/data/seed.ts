@@ -1,3 +1,4 @@
+import { assetUrl } from "@/lib/utils";
 /**
  * Post-Discharge Check — seed data.
  * All app pages consume this module. Dates are anchored to "today" = Mar 10, 2026
@@ -165,7 +166,7 @@ export const patients: Patient[] = [
     mrn: "MRN-0482113",
     phone: "(617) 555-0143",
     dob: "1953-06-02",
-    avatar: "/avatar-margaret.png",
+    avatar: assetUrl("/avatar-margaret.png"),
     cohort: "ortho",
     cohortLabel: "Ortho · L hip replacement",
     procedure: "Left total hip arthroplasty",
@@ -197,7 +198,7 @@ export const patients: Patient[] = [
     mrn: "MRN-0477802",
     phone: "(617) 555-0188",
     dob: "1957-11-19",
-    avatar: "/avatar-robert.png",
+    avatar: assetUrl("/avatar-robert.png"),
     cohort: "cardiac",
     cohortLabel: "Cardiac · post-MI",
     procedure: "NSTEMI · PCI with stent",
@@ -228,7 +229,7 @@ export const patients: Patient[] = [
     mrn: "MRN-0465210",
     phone: "(617) 555-0121",
     dob: "1964-04-27",
-    avatar: "/avatar-linda.png",
+    avatar: assetUrl("/avatar-linda.png"),
     cohort: "copd",
     cohortLabel: "COPD · pneumonia",
     procedure: "Community-acquired pneumonia, COPD exacerbation",
@@ -260,7 +261,7 @@ export const patients: Patient[] = [
     mrn: "MRN-0453977",
     phone: "(617) 555-0164",
     dob: "1951-09-08",
-    avatar: "/avatar-james.png",
+    avatar: assetUrl("/avatar-james.png"),
     cohort: "cardiac",
     cohortLabel: "Cardiac · CHF",
     procedure: "CHF exacerbation · diuresis",
@@ -291,7 +292,7 @@ export const patients: Patient[] = [
     mrn: "MRN-0481145",
     phone: "(617) 555-0112",
     dob: "1967-12-30",
-    avatar: "/avatar-priya.png",
+    avatar: assetUrl("/avatar-priya.png"),
     cohort: "surgical",
     cohortLabel: "Surgical · colectomy",
     procedure: "Laparoscopic sigmoid colectomy",
@@ -322,7 +323,7 @@ export const patients: Patient[] = [
     mrn: "MRN-0446318",
     phone: "(617) 555-0177",
     dob: "1955-02-14",
-    avatar: "/avatar-frank.png",
+    avatar: assetUrl("/avatar-frank.png"),
     cohort: "ortho",
     cohortLabel: "Ortho · R knee",
     procedure: "Right total knee arthroplasty",
@@ -351,9 +352,9 @@ export const patientById = (id: string) => patients.find((p) => p.id === id);
 /* -------------------------------------------------------------- care team */
 
 export const careTeam: CareTeamMember[] = [
-  { id: "nurse-ruiz", name: "Nurse Ruiz", role: "On-call RN · Care coordination", avatar: "/avatar-nurse-ruiz.png", onCall: true, presence: "online" },
-  { id: "nurse-obrien", name: "Nurse O'Brien", role: "RN · Escalation pool", avatar: "/avatar-nurse-obrien.png", presence: "busy" },
-  { id: "dr-chen", name: "Dr. Chen", role: "Hospitalist · Program lead", avatar: "/avatar-dr-chen.png", presence: "online" },
+  { id: "nurse-ruiz", name: "Nurse Ruiz", role: "On-call RN · Care coordination", avatar: assetUrl("/avatar-nurse-ruiz.png"), onCall: true, presence: "online" },
+  { id: "nurse-obrien", name: "Nurse O'Brien", role: "RN · Escalation pool", avatar: assetUrl("/avatar-nurse-obrien.png"), presence: "busy" },
+  { id: "dr-chen", name: "Dr. Chen", role: "Hospitalist · Program lead", avatar: assetUrl("/avatar-dr-chen.png"), presence: "online" },
 ];
 
 export const careTeamById = (id: string) => careTeam.find((m) => m.id === id);
