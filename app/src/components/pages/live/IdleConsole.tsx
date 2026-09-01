@@ -106,6 +106,7 @@ export function IdleConsole({ onStart }: { onStart: (patientId?: string, phone?:
         <div className="mt-5 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <button
             type="button"
+            id="start-demo-call"
             onClick={() => start("margaret-ellis")}
             className={cn(
               "flex items-center gap-2 rounded-xl bg-teal-500 px-5 py-2.5 text-sm font-semibold text-white animate-ring-breathe transition-colors hover:bg-teal-600",

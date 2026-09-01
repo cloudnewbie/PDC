@@ -172,6 +172,7 @@ function IntegrationSection() {
             <button
               type="button"
               onClick={runTest}
+              id="test-connection"
               disabled={testing}
               className="flex items-center gap-1.5 rounded-xl border border-line px-3.5 py-2 text-[13px] font-semibold text-slate-700 transition-colors hover:border-teal-500/50 hover:text-teal-700 disabled:opacity-50"
             >

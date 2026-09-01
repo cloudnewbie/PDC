@@ -532,6 +532,7 @@ export default function LiveCall() {
                   <motion.button
                     layoutId="escalate-morph"
                     type="button"
+                    id="escalate-to-nurse"
                     disabled={!escalateEnabled}
                     onClick={() => setEscalateOpen(true)}
                     animate={
